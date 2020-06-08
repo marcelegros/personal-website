@@ -1,0 +1,38 @@
+
+.itemPreviewContainer{
+
+    padding-top: 40px;
+    margin-left: 25%;
+    width: 50%;
+
+}
+.itemPreviewImgWrap {
+    max-height: 50vh;
+    overflow: hidden;
+    width: 100%;
+    /* height: auto; */
+}
+
+
+.itemPreviewImg {
+
+    position: relative;
+    width: 100%;
+
+    /* height: 100%; */
+    /* overflow: hidden; */
+
+}
+
+.itemPreviewText {
+
+    width: 76%;
+    /* padding-left: calc(25% + 40px); */
+    padding-left: 12%;
+    padding-right: 12%;
+    /* padding-right: calc(25% + 40px); */
+
+    color: black;
+    padding-top: 25px;
+    text-align: left;
+}
