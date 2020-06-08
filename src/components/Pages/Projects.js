@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 import '../../styles/Projects.css';
 
+import DescriptionArc from '../DescriptionArc';
+
+import projectDescriptions from '../../constants/projects';
+
 
 class ProjectsPage extends Component {
 
@@ -22,7 +26,23 @@ class ProjectsPage extends Component {
             <div className="projectsPageContainer">
 
 
-                Projects Page
+                {projectDescriptions.map( project => {
+
+                    return <div>
+                        <DescriptionArc
+
+                        title = {project.title}
+                        properties = {project.properties}
+                        description = {project.description}
+                        image = {project.image}
+                        video = {project.video}
+
+                        />
+
+                        <hr/>
+                    </div>
+
+                })}
 
             </div>
 
