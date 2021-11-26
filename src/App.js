@@ -3,7 +3,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import './App.css';
+import './styles/main.css';
 
 import Header from './components/Header'
 import Home from './components/Pages/Home'
@@ -12,6 +12,7 @@ import ResearchPage from './components/Pages/Research';
 import WebsitesPage from './components/Pages/Websites';
 import ProjectsPage from './components/Pages/Projects';
 import WritingPage from './components/Pages/Writing';
+import PortfolioPage from './components/Pages/PortfolioPage';
 
 function App() {
   return (
@@ -21,13 +22,18 @@ function App() {
 
       {/* Header */}
       <Header />
-      <div style={{height: '60px'}} />
+      {/* <div style={{height: '60px'}} /> */}
 
       <Switch>
 
         {/* Home */}
         <Route exact path='/' 
           render={({...props}) => <Home />}
+        />
+
+        {/* Portfolio Page */}
+        <Route exact path='/portfolio/:groupId'
+          render={({...props}) => <PortfolioPage {...props} />}
         />
 
         {/* Bio */}

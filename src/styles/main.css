@@ -1,0 +1,82 @@
+
+:root {
+
+    /* Global colors */
+
+    --ayisen-blood-red: rgba(100, 5, 5, 1);
+    --ayisen-orange-red: rgba(255, 68, 0, 0.842);
+    --ayisen-light-seashell: rgba(255, 245, 238, 0.37);
+
+    --colors-hoverBlue: rgb(0, 117, 212);
+
+    background-color: black;
+
+
+    /* Global transitions */
+    --transition-normal: 0.2s ease-in-out all;
+
+    /* Letter spacing  */
+    --spacey-letters: 0.2em;
+
+    font-family: 'lato';
+    color: white;
+
+}
+
+.App {
+    margin-top: 80px;
+}
+
+
+
+.fadeQuick {
+    animation: fadeQuick ease 1s;
+    -webkit-animation: fadeQuick ease 1s;
+    -moz-animation: fadeQuick ease 1s;
+    -o-animation: fadeQuick ease 1s;
+    -ms-animation: fadeQuick ease 1s;
+  }
+  @keyframes fadeQuick {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeQuick {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeQuick {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeQuick {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeQuick {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+  }
+}

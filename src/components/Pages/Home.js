@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 import '../../styles/Home.css';
 
-import ItemPreview from '../ItemPreview';
+import ProjectPreview from '../ProjectPreview';
 
 
 import previewData from '../../constants/homePreviewData';
+import {allProjects} from '../../constants/projects';
 
 
 class HomePage extends Component {
@@ -24,17 +25,24 @@ class HomePage extends Component {
 
         return (
 
-            <div className="homePageContainer">
+            <div className="homePageContainer fadeQuick">
 
 
-                {/* Item previews */}
-                {previewData.map( previewElem => {
+                {/* Project Group Links */}
+                {allProjects.map( (projectGroup, pGIdx) => {
 
-                    return (
-                        <ItemPreview data={previewElem} />
-                    )
+                    const data = {
+                        title: projectGroup.groupName,
+                        text: projectGroup.groupDescription,
+                        imgPath: projectGroup.imgPath,
+                        link: '/portfolio/' + projectGroup.groupId,
+                    };
 
-                })}
+                    return <ProjectPreview 
+                        data = {data}
+                    />
+
+                } )}
 
             </div>
 

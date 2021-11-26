@@ -24,3 +24,111 @@ export default [
     },
 
 ]
+
+
+export const allProjects = [
+
+    // Software Group
+    {
+        groupId: 'software',
+        groupName: 'Software Projects',
+        groupDescription: 'TODO @Marcel',
+        imgPath: '/resources/Backgrounds/Hubble.jpg',
+
+        projects: [
+
+            // Ayisen Audio
+            {
+                // Proj Meta
+                pId: 'ayisen',
+                projectName: 'Ayisen Audio LLC.',
+                description: 'TODO @Marcel',
+                imgPath: '/resources/Backgrounds/Spires1.jpg',
+                externalLink: 'https://ayisen.com',
+                internalLink: '/projects/ayisen',
+                spotlight: true,
+
+                // Info sections
+                infoSections: [
+                
+                ],
+
+            },
+
+            // Observer 01
+            {
+                // Proj Meta
+                pId: 'observer_01',
+                projectName: 'Observer_01',
+                description: 'TODO @Marcel',
+                imgPath: '/resources/Backgrounds/Spires1.jpg',
+                externalLink: 'https://ayisen.com',
+                spotlight: true,
+
+                // Info sections
+                infoSections: [
+                
+                ],
+            },
+
+            // Legrosports
+            {
+                externalLink: 'http://legrosports.com'
+            },
+
+            // NoFoLeg
+            {
+                // Proj Meta
+                pId: 'nf_design_studio',
+                projectName: 'NF Design Studio Site',
+                description: 'TODO @Marcel',
+                imgPath: '/resources/Backgrounds/Spires1.jpg',
+                externalLink: 'http://nfdesignstudio.com/',
+                spotlight: true,
+
+                // Info sections
+                infoSections: [
+                
+                ],
+            },
+
+        ],
+    },
+
+    // Publications Group
+    {
+        groupId: 'writing',
+        groupName: 'Publications',
+        groupDescription: 'Published poetry, prose, and essays.',
+        imgPath: '/resources/Backgrounds/Spires1.jpg',
+
+        projects: [
+
+        ],
+
+    },
+
+    // Research Group
+    {
+        groupId: 'research',
+        groupName: 'Research',
+        groupDescription: 'TODO @Marcel',
+        imgPath: '/resources/Backgrounds/Hubble.jpg',
+
+        projects: [
+
+            // Dark Matter Research
+            {
+                
+            },
+
+        ],
+    }
+
+
+
+
+];
+
+
+
