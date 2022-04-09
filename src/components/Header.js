@@ -6,7 +6,6 @@ import "../styles/Header.css"
 
 
 const links = [
-    {display: 'About', link: 'Bio'},
     {display: 'Research', link: '/portfolio/research'},
     {display: 'Writing', link: '/portfolio/writing'},
     {display: 'Software', link: '/portfolio/software'},
@@ -65,7 +64,7 @@ class Header extends Component {
                     })}
                     
                     {/* Nav Opener */}
-                    <img className='headerOpener' src='/resources/icons/nav.png' alt='Nav'  onClick={this.toggleNav}/>
+                    <img className='headerOpener' src='/resources/Icons/nav.png' alt='Nav'  onClick={this.toggleNav}/>
 
                     {/* Side Nav */}
                     <div className={'navBar' + (this.state.navOpen ? ' navBarOpen' : '')}>

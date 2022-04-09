@@ -39,7 +39,7 @@ class PortfolioPage extends Component {
                     const data = {
                         title: project.projectName,
                         text: project.description,
-                        imgPath: project.imgPath,
+                        imgPath: project.thumbnailImg,
                         link: '/project/' + project.pId,
                     };
 

@@ -1,0 +1,44 @@
+
+
+.ProjectPageBody {
+
+    padding: 0px 20%;
+
+
+    padding-bottom: 200px;
+
+}
+
+
+.ProjectPageBody .description {
+    padding: 80px 0px;
+
+    opacity: 0.8;
+    font-size: 18px;
+
+}
+
+
+
+.viewMore {
+    width: 100%;
+    text-align: center;
+}
+
+.viewMore > a {
+    all: unset;
+
+    cursor: pointer;
+    text-align: center;
+
+    font-size: 20px;
+
+    opacity: 0.6;
+
+    transition: ease-in-out 0.1s all;
+
+}
+
+.viewMore > a:hover {
+    opacity: 1;
+}

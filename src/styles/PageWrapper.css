@@ -1,0 +1,25 @@
+
+
+.pageWrapperOutter {
+
+    width: 100%;
+    /* height: 700px; */
+    /* height: calc(100vh - 200px); */
+    height: 100vh;
+
+}
+
+/* 
+@media only screen and (max-width: 800px) {
+    .HeaderOption {
+        display: none !important;
+    }
+    .headerOpener {
+        display: block;
+    }
+
+    .Header .headerOpener {
+      float: right;
+      display: block;
+    }
+} */

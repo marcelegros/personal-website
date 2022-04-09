@@ -13,6 +13,7 @@ import WebsitesPage from './components/Pages/Websites';
 import ProjectsPage from './components/Pages/Projects';
 import WritingPage from './components/Pages/Writing';
 import PortfolioPage from './components/Pages/PortfolioPage';
+import ProjectPage from './components/Pages/ProjectPage';
 
 function App() {
   return (
@@ -34,6 +35,11 @@ function App() {
         {/* Portfolio Page */}
         <Route exact path='/portfolio/:groupId'
           render={({...props}) => <PortfolioPage {...props} />}
+        />
+
+        {/* Project Page */}
+        <Route exact path='/project/:projectId'
+          render={({...props}) => <ProjectPage {...props} />}
         />
 
         {/* Bio */}
