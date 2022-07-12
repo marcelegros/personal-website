@@ -1,0 +1,62 @@
+
+
+.itemCarousel {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.itemCarousel > * {
+    /* margin-right: 20px; */
+}
+
+.presetCard {
+
+    width: 100%;
+    /* max-width: 375px; */
+    /* aspect-ratio: 1; */
+    height: 375px;
+
+    overflow: hidden;
+    position: relative;
+
+}
+
+.presetCard > img {
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.presetCard .infoDiv {
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    z-index: 2;
+
+    transition: ease-in-out 0.2s all;
+
+    color: white;
+
+}
+
+
+.presetCard .infoDiv:hover {
+
+    opacity: 1;
+    background-color: rgba(0,0,0,0.3);
+
+}

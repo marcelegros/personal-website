@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+
+.mobileOnly {
+  display: none;
+}
+
+.browserOnly {
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .mobileOnly {
+    display: block;
+  }
+
+  .browserOnly {
+    display: none;
+  }
+
+}

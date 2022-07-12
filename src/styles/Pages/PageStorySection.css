@@ -1,0 +1,17 @@
+
+.pageStoryDescription {
+
+    padding: 40px 0px;
+    opacity: 0.8;
+
+}
+
+.pageStoryDescription li {
+    text-indent: 16px;
+    padding: 10px 0px;
+}
+
+.pageStoryDescription li b {
+    font-size: 18px;
+    padding-right: 10px;
+}

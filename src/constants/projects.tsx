@@ -28,10 +28,63 @@ export const allProjects: ProjectGroup[] = [
                 </div>,
 
                 productStory: [
+
+                    {
+                        title: "Role",
+                        description: <div>
+                            <li>
+                                <b>Co-Founder</b>
+                            </li>
+                            <li>
+                                <b>Lead Developer</b>
+                            </li>
+                            <li>
+                                <b>Software Architect</b>
+                            </li>
+                            <li>
+                                <b>IT / Infrastructure Engineer</b>
+                            </li>
+                        </div>,
+                        imageGallery: [],
+                        videoGallery: []
+                    },
+
                     {
                         title: "Web Front-End", 
                         description: <div>
-                            Here are some details on the web front-end
+                            <p> The Ayisen Web-UI serves to provide users with the ability to browse and purchase Products & Add-Ons, as well as manage their account.</p>
+                            <p>Via connections to the API, it performs
+                                <li>
+                                    <b>Payment processing </b> via Stripe.
+                                </li>
+                                <li>
+                                    <b>Purchased product management </b>via internal dashboard.
+                                </li>
+                                <li>
+                                    <b>Dynamic price and sale fetching</b> from Stripe.
+                                </li>
+
+                            </p>
+                        </div>,
+                        imageGallery: ['/resources/Projects/Ayisen/BannerImg.jpg','/resources/Projects/Ayisen/BannerImg.jpg','/resources/Projects/Ayisen/BannerImg.jpg'],
+                        videoGallery: [],
+                    },
+
+                    {
+                        title: "Express JS Backend", 
+                        description: <div>
+                            <p> The Ayisen API is an Express API (running wiht MongoDB), which serves the following purposes for Ayisen's customers:
+                                <li>
+                                    <b>Authentication:</b> Account / cookie based authentication.
+                                </li>
+                                <li>
+                                    <b>Product Management: </b>Management of user purchased products.
+                                </li>
+                                <li>
+                                    <b>Copy Protected Registration: </b>Registration of user's purchased products, via KeyFile encryption and communication with C++ product instances.
+                                </li>
+
+                            </p>
                         </div>,
                         imageGallery: [],
                         videoGallery: [],
@@ -59,15 +112,43 @@ export const allProjects: ProjectGroup[] = [
 
                 description: 'A series of online toys, exploring symetry, fun, and emergent properties of free simulations.',
                 pageDescription: <div>
-                    <p>
-                        A set of online 2d, interacted spaces, exploring symetry, fun, and emergent properties of free simulations.
-                    </p>
-                    <p>
-                        Take a peek around! Relieve some stess, try soemthing fun :)
-                    </p>
+                    
                 </div>,
 
-                productStory: [],
+                productStory: [
+
+                    {
+                        title: "Playing the Game",
+                        description: <div>
+                            <p>
+                                Ayisen Fidget is a set of online 2d, interacted spaces, exploring symetry, fun, and emergent properties of free simulations.
+                            </p>
+                            <p>
+                                Take a peek around! Relieve some stess, try soemthing fun :)
+                            </p>
+                        </div>,
+                        imageGallery: [
+                            "/resources/Projects/AyisenFidget/Bubbles1.png",
+                            "/resources/Projects/AyisenFidget/Spider1.png"
+                        ],
+                        videoGallery: [],
+                    },
+
+                    {
+                        title: "Role",
+                        description: <div>
+                            <li>
+                                <b>Developer</b>
+                            </li>
+                            <li>
+                                <b>Designer / Content Creator</b>
+                            </li>
+                        </div>,
+                        imageGallery: [],
+                        videoGallery: []
+                    }
+
+                ],
 
 
                 externalLink: 'https://fidget.ayisen.com',

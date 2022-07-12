@@ -5,6 +5,7 @@ import PageWrapper from './PageWrapper';
 
 import {getProjById} from '../../constants/projects'
 import "../../styles/ProjectPage.css";
+import PageStorySection from '../Utils/PageStorySection';
 
 export interface ProjectPageProps {
 
@@ -29,6 +30,8 @@ export default (props: ProjectPageProps) => {
 
         {project ? <>
 
+            {/* TODO @Marcel: I should have a "Visit the Project" button pretty high up here! With a nice picture :) */}
+
             {/* Body */}
             <div className='ProjectPageBody'>
 
@@ -36,6 +39,16 @@ export default (props: ProjectPageProps) => {
                 {project?.pageDescription && <div className='description'>
                     {project.pageDescription}    
                 </div>}
+
+                {/* Story */}
+                {project.productStory.map((storyElem, idx) => {
+
+                    return <PageStorySection
+                        story={storyElem} 
+                        key = {idx}
+                    />
+
+                })}
 
                 {/* External Link? */}
                 
