@@ -3,8 +3,14 @@ import React, { Component } from 'react';
 import '../styles/HeaderImage.css';
 
 
+export interface HeaderImageProps {
+    src: string,
+    fadeDown: boolean,
+    headerTitle: string,
+    headerDescription: string,
+}
 
-export default (props) => {
+export default (props: HeaderImageProps) => {
 
 
     return <div className='headerImgWrapper'>

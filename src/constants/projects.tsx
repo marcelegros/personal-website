@@ -1,40 +1,14 @@
 
 import React from "react";
-
-export default [
-    {
-        title : 'MAIA_01',
-        properties : [ 
-            {key: 'Project', value: 'MAIA_01'}, 
-            {key: 'Languages', value: 'C++, Python'}, 
-            {key: 'Github', value: 'Private (contact for code samples).'} 
-        ],
-        description : 'The MAIA_01 is a software and hardware synthesizer, aiming to help musicians discover new sounds by visual conversion to audio tones. The MAIA_01 seeks to use AI to unlock a variety of sounds in vastly customizable ways.',
-        image : '/resources/Backgrounds/Synth.jpg',
-    },
-
-    {
-        title : 'SecondNames',
-        properties : [ 
-            {key: 'Project', value: 'SecondNames'}, 
-            {key: 'Languages', value: 'Javascript (Mongo, Express, React, Node, Docker)'}, 
-            {key: 'Github', value: 'Private (contact for code samples).'} 
-        ],
-        description : 'SecondNames is a web journal that seeks to publish translations in fiction, poetry, and nonfiction, as well as cultural criticism, and general musings on art. On a technical level, the journal hopes to connect new writers with translators, in order to proliferate the number of important voices transcending the language barrier.',
-        video : '/resources/SecondNames.mp4',
-    },
-
-]
+import { ProjectGroup } from "./types";
 
 
-export const allProjects = [
+export const allProjects: ProjectGroup[] = [
 
     // Software Group
     {
         groupId: 'software',
         groupName: 'Software Projects',
-        groupDescription: 'TODO @Marcel',
-        imgPath: '/resources/Backgrounds/Hubble.jpg',
 
         projects: [
 
@@ -53,21 +27,28 @@ export const allProjects = [
                     </p>
                 </div>,
 
+                productStory: [
+                    {
+                        title: "Web Front-End", 
+                        description: <div>
+                            Here are some details on the web front-end
+                        </div>,
+                        imageGallery: [],
+                        videoGallery: [],
+                    },
+                ],
+
 
                 externalLink: 'https://ayisen.com',
-                internalLink: '/projects/ayisen',
-                spotlight: true,
 
                 // Images
                 bannerImg: '/resources/Projects/Ayisen/BannerImg.jpg',
                 thumbnailImg: "/resources/Projects/Ayisen/Thumbnail.jpg",
 
-                // Info sections
-                infoSections: [
-                
-                ],
+                stack: ["React", "Typescript", "Express Js", "MongoDB", "C++", ]
 
             },
+
 
             // Ayisen :: Fidget
             {
@@ -86,18 +67,16 @@ export const allProjects = [
                     </p>
                 </div>,
 
+                productStory: [],
+
 
                 externalLink: 'https://fidget.ayisen.com',
-                spotlight: true,
 
                 // Images
                 bannerImg: '/resources/Projects/AyisenFidget/Thumbnail.jpg',
                 thumbnailImg: "/resources/Projects/AyisenFidget/Thumbnail.jpg",
 
-                // Info sections
-                infoSections: [
-                
-                ],
+                stack: ["React", "Javascript"],
 
             },
 
@@ -110,15 +89,20 @@ export const allProjects = [
 
                 description: 'Observer_01 is a digital instrument, allowing musicians and producers to generate rhythms and dynamic music using the relationshipt between rotating polygons.',
                 externalLink: 'https://ayisen.com',
-                spotlight: true,
 
                 thumbnailImg: "/resources/Projects/Observer_01/Thumbnail.jpg",
                 bannerImg: "/resources/Projects/Observer_01/BannerImg.jpg",
 
+                pageDescription: <div>"TODO @Marcel"</div>,
+
                 // Info sections
-                infoSections: [
+                productStory: [
                 
                 ],
+
+                stack: [
+                    "C++", "Juce"
+                ]
             },
 
             // 3D Wavetable Synth
@@ -130,15 +114,20 @@ export const allProjects = [
 
                 description: 'A 3D wavetable synthesizer built from scratch.',
                 // externalLink: 'https://ayisen.com',
-                spotlight: true,
 
                 thumbnailImg: "/resources/Projects/3DWavetableSynth/Thumbnail.jpg",
                 bannerImg: "/resources/Projects/3DWavetableSynth/Thumbnail.jpg",
 
                 // Info sections
-                infoSections: [
+                productStory: [
                 
                 ],
+
+                pageDescription: <div></div>,
+
+                stack: [
+                    "C++", "opengl"
+                ]
             },
 
             // Legrosports
@@ -154,16 +143,20 @@ export const allProjects = [
                 projectHeadTitle: 'Art, CAD/Surverying, Interior Design, and Photography custom website.',
 
                 description: 'Art, CAD/Surverying, Interior Design, and Photography custom website.',
-                externalLinks: ['http://nfdesignstudio.com/'],
-                spotlight: true,
 
                 thumbnailImg: "/resources/Projects/NoFoLeg/BannerImg.jpg",
                 bannerImg: "/resources/Projects/NoFoLeg/BannerImg.jpg",
 
                 // Info sections
-                infoSections: [
+                productStory: [
                 
                 ],
+
+                pageDescription: <div></div>,
+
+                stack: [
+                    "React"
+                ]
             },
 
         ],
@@ -173,8 +166,6 @@ export const allProjects = [
     {
         groupId: 'writing',
         groupName: 'Publications',
-        groupDescription: 'Published poetry, prose, and essays.',
-        imgPath: '/resources/Backgrounds/Spires1.jpg',
 
         projects: [
 
@@ -186,8 +177,6 @@ export const allProjects = [
     {
         groupId: 'research',
         groupName: 'Research',
-        groupDescription: 'TODO @Marcel',
-        imgPath: '/resources/Backgrounds/Hubble.jpg',
 
         projects: [
 
@@ -199,16 +188,19 @@ export const allProjects = [
                 projectHeadTitle: 'Undergraduate Research on Dark Matter in Dwarf Galaxies',
 
                 description: 'Undergraduate Research on Dark Matter in Dwarf Galaxies. Used python to examine, and distill properties of Dark Matter within Dwarf Galaxies.',
-                spotlight: true,
 
                 // Images
                 bannerImg: '/resources/Projects/DarkMatter/Thumbnail.jpg',
                 thumbnailImg: "/resources/Projects/DarkMatter/Thumbnail.jpg",
 
                 // Info sections
-                infoSections: [
+                productStory: [
                 
                 ],
+
+                pageDescription: <div></div>,
+
+                stack: ['Python'],
 
             },
 
@@ -222,7 +214,7 @@ export const allProjects = [
 
 
 
-export const getProjById = (projectId) => {
+export const getProjById = (projectId: string) => {
 
     // Search for project 
     for (let group of allProjects) {

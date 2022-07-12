@@ -4,7 +4,16 @@ import HeaderImage from '../HeaderImage';
 
 import '../../styles/PageWrapper.css';
 
-export default (props) => {
+export interface PageWrapperProps {
+
+    headerTitle: string,
+    headerDescription: string,
+    headerImg: string,
+    children: any,
+
+}
+
+export default (props: PageWrapperProps) => {
 
 
     return <div className='fadeQuick'>

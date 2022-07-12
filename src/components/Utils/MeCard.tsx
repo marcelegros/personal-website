@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom'
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 import '../../styles/MeCard.css';
 
@@ -28,14 +27,18 @@ const promos = [
 
 ]
 
-export default (props) => {
+export interface MeCardProps {
 
-    const history = useHistory();
+}
+
+export default (props: MeCardProps) => {
+
+    const navigate = useNavigate();
 
 
-    const promoClick = (link) => {
+    const promoClick = (link: string) => {
 
-        history.push(link)
+        navigate(link);
 
     }
 
@@ -68,7 +71,7 @@ export default (props) => {
             <div className='promos'>
                 {promos.map(promo => {
 
-                    return  <div className='promoCard' style={{backgroundImage: (promo.backgroundImage ?? null)}} onClick={() => promoClick(promo.link)}>
+                    return  <div className='promoCard' onClick={() => promoClick(promo.link)}>
                         <h1>{promo.title}</h1>
                     </div>
 
