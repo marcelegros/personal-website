@@ -6,6 +6,8 @@ export interface ProjectStoryPhase {
     description: JSX.Element,
     imageGallery: string[],
     videoGallery: string[],
+    stack?: string[],
+    iframeLink?: string,
 
 };
 
@@ -22,7 +24,7 @@ export interface Project {
     description: string,
 
     // Page Description
-    pageDescription: JSX.Element,
+    pageDescription?: JSX.Element,
 
     productStory: ProjectStoryPhase[],
 
@@ -36,6 +38,7 @@ export interface Project {
 
     // Stack
     stack: string[],
+    role: string[],
 
 }
 

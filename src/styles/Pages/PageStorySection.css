@@ -1,4 +1,16 @@
 
+
+.pageStorySection {
+
+    border-top: 2px solid rgba(50, 50, 50, 1);
+    padding-top: 20px;
+
+}
+
+.imageCarousel {
+    padding-top: 20px;
+}
+
 .pageStoryDescription {
 
     padding: 40px 0px;
@@ -14,4 +26,9 @@
 .pageStoryDescription li b {
     font-size: 18px;
     padding-right: 10px;
+}
+
+.pageStoryIframe {
+    width: 100%;
+    height: 800px;
 }

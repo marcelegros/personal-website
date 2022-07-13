@@ -2,6 +2,7 @@ import React from "react";
 import { ProjectStoryPhase } from '../../constants/types';
 import ItemCarousel from "./ItemCarousel";
 import '../../styles/Pages/PageStorySection.css'
+import StackAndRoles from "./StackAndRoles";
 
 export interface PageStorySectionProps {
 
@@ -12,9 +13,16 @@ export interface PageStorySectionProps {
 export const PageStorySection = (props: PageStorySectionProps) => {
 
 
-    return <div>
+    return <div className="pageStorySection">
 
         <h2>{props.story.title}</h2>
+
+        {props.story.stack && <div>
+            <StackAndRoles 
+                stack = {props.story.stack}
+                role = {[]}
+            />
+        </div>}
 
         <div className="imageCarousel">
             <ItemCarousel>
@@ -34,6 +42,11 @@ export const PageStorySection = (props: PageStorySectionProps) => {
         <div className="pageStoryDescription">
             {props.story.description}
         </div>
+
+        {props.story.iframeLink && <iframe 
+            className="pageStoryIframe" 
+            src={props.story.iframeLink}
+        />}
 
 
     </div>

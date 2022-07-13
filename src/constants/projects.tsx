@@ -30,35 +30,21 @@ export const allProjects: ProjectGroup[] = [
                 productStory: [
 
                     {
-                        title: "Role",
-                        description: <div>
-                            <li>
-                                <b>Co-Founder</b>
-                            </li>
-                            <li>
-                                <b>Lead Developer</b>
-                            </li>
-                            <li>
-                                <b>Software Architect</b>
-                            </li>
-                            <li>
-                                <b>IT / Infrastructure Engineer</b>
-                            </li>
-                        </div>,
-                        imageGallery: [],
-                        videoGallery: []
-                    },
-
-                    {
                         title: "Web Front-End", 
                         description: <div>
                             <p> The Ayisen Web-UI serves to provide users with the ability to browse and purchase Products & Add-Ons, as well as manage their account.</p>
-                            <p>Via connections to the API, it performs
+                            <p>It is comprised of the following components, which communciate with our public REST API: 
+                                <li>
+                                    <b>Prouct browsing & cart</b>, with integrated checkout.
+                                </li>
                                 <li>
                                     <b>Payment processing </b> via Stripe.
                                 </li>
                                 <li>
-                                    <b>Purchased product management </b>via internal dashboard.
+                                    <b>Account settings page </b>for managing user infromation.
+                                </li>
+                                <li>
+                                    <b>"My Products" dashboard</b> for managing products & licenses.
                                 </li>
                                 <li>
                                     <b>Dynamic price and sale fetching</b> from Stripe.
@@ -68,6 +54,7 @@ export const allProjects: ProjectGroup[] = [
                         </div>,
                         imageGallery: ['/resources/Projects/Ayisen/BannerImg.jpg','/resources/Projects/Ayisen/BannerImg.jpg','/resources/Projects/Ayisen/BannerImg.jpg'],
                         videoGallery: [],
+                        stack: ["React", "Docker"]
                     },
 
                     {
@@ -78,16 +65,72 @@ export const allProjects: ProjectGroup[] = [
                                     <b>Authentication:</b> Account / cookie based authentication.
                                 </li>
                                 <li>
+                                    <b>Prurchase fulfillment</b> via Webhooks.
+                                </li>
+                                <li>
                                     <b>Product Management: </b>Management of user purchased products.
                                 </li>
                                 <li>
                                     <b>Copy Protected Registration: </b>Registration of user's purchased products, via KeyFile encryption and communication with C++ product instances.
+                                </li>
+                                <li>
+                                    <b>Internal email alerts (AWS SES)</b> for errors thrown in the purchase pipeline.
+                                </li>
+                                <li>
+                                    <b>User emailing (AWS SES)</b> for password resetting and email verification.
                                 </li>
 
                             </p>
                         </div>,
                         imageGallery: [],
                         videoGallery: [],
+                        stack: ["Express Js", 'Stripe', "AWS SES", "Docker", "AWS S3", "MongoDB"]
+                    },
+
+                    {
+                        title: "Internal-Web-Portal", 
+                        description: <div>
+                            <p> The Ayisen Internal-Web-Portal allows members of the Ayisen team to easily manage versions, and deploy additional products to users as needed.</p>
+                            <p>It is comprised of the following components, which communciate with our private internal REST API: 
+                                <li>
+                                    <b>Product version deployments</b>
+                                </li>
+                                <li>
+                                    <b>Product version updates</b>
+                                </li>
+                                <li>
+                                    <b>Product version "upload files for each os."</b>
+                                </li>
+                                <li>
+                                    <b>Product Utilites,</b> for executing scripts to send instances to users, generating serial numbers, etc.
+                                </li>
+
+                            </p>
+                        </div>,
+                        imageGallery: ['/resources/Projects/Ayisen/BannerImg.jpg','/resources/Projects/Ayisen/BannerImg.jpg','/resources/Projects/Ayisen/BannerImg.jpg'],
+                        videoGallery: [],
+                        stack: ["React", "Docker"],
+                    },
+
+                    {
+                        title: "Internal-API", 
+                        description: <div>
+                            <p> The Ayisen API is an Express API (running wiht MongoDB), which serves the following purposes for Ayisen's internal uses:
+                                <li>
+                                    <b>Deploying new product versions</b> 
+                                </li>
+                                <li>
+                                    <b>Uploading product version downloadables to S3</b>
+                                </li>
+                                <li>
+                                    <b>Deploying new product instances to users.</b>
+                                </li>
+
+                            </p>
+                        </div>,
+                        imageGallery: [],
+                        videoGallery: [],
+                        stack: ["Express Js", 'Stripe', "Docker", "AWS S3", "MongoDB"]
                     },
                 ],
 
@@ -98,7 +141,23 @@ export const allProjects: ProjectGroup[] = [
                 bannerImg: '/resources/Projects/Ayisen/BannerImg.jpg',
                 thumbnailImg: "/resources/Projects/Ayisen/Thumbnail.jpg",
 
-                stack: ["React", "Typescript", "Express Js", "MongoDB", "C++", ]
+                stack: [
+                    "React", 
+                    "Typescript", 
+                    "Express Js", 
+                    "Jest",
+                    "MongoDB", 
+                    "C++", 
+                    "Docker",
+                    "Stripe",
+                    "AWS SES",
+                    "AWS S3",
+                ],
+                role: [
+                    "Co-Founder",
+                    "Lead Developer",
+                    "Lead Systems Engineer"
+                ]
 
             },
 
@@ -111,9 +170,6 @@ export const allProjects: ProjectGroup[] = [
                 projectHeadTitle: 'Some fun online toys to play with :)',
 
                 description: 'A series of online toys, exploring symetry, fun, and emergent properties of free simulations.',
-                pageDescription: <div>
-                    
-                </div>,
 
                 productStory: [
 
@@ -124,29 +180,19 @@ export const allProjects: ProjectGroup[] = [
                                 Ayisen Fidget is a set of online 2d, interacted spaces, exploring symetry, fun, and emergent properties of free simulations.
                             </p>
                             <p>
-                                Take a peek around! Relieve some stess, try soemthing fun :)
+                                Try it, by fiddling around in the window below! :)
+                            </p>
+                            <p style={{opacity: 0.4}}>
+                                Hint: Click, drag, navigate the menu in top right
                             </p>
                         </div>,
                         imageGallery: [
-                            "/resources/Projects/AyisenFidget/Bubbles1.png",
-                            "/resources/Projects/AyisenFidget/Spider1.png"
+                            // "/resources/Projects/AyisenFidget/Bubbles1.png",
+                            // "/resources/Projects/AyisenFidget/Spider1.png"
                         ],
                         videoGallery: [],
+                        iframeLink: "https://fidget.ayisen.com",
                     },
-
-                    {
-                        title: "Role",
-                        description: <div>
-                            <li>
-                                <b>Developer</b>
-                            </li>
-                            <li>
-                                <b>Designer / Content Creator</b>
-                            </li>
-                        </div>,
-                        imageGallery: [],
-                        videoGallery: []
-                    }
 
                 ],
 
@@ -157,7 +203,15 @@ export const allProjects: ProjectGroup[] = [
                 bannerImg: '/resources/Projects/AyisenFidget/Thumbnail.jpg',
                 thumbnailImg: "/resources/Projects/AyisenFidget/Thumbnail.jpg",
 
-                stack: ["React", "Javascript"],
+                stack: [
+                    "React", 
+                    "Typescript",
+                    "Docker",
+                ],
+                role: [
+                    "Lead Developer",
+                    "Designer / Content Creator"
+                ]
 
             },
 
@@ -182,7 +236,13 @@ export const allProjects: ProjectGroup[] = [
                 ],
 
                 stack: [
-                    "C++", "Juce"
+                    "C++", 
+                    "Juce"
+                ],
+
+                role: [
+                    "Lead Developer",
+                    "Lead Systems Engineer",
                 ]
             },
 
@@ -204,10 +264,14 @@ export const allProjects: ProjectGroup[] = [
                 
                 ],
 
-                pageDescription: <div></div>,
 
                 stack: [
                     "C++", "opengl"
+                ],
+
+                role: [
+                    "Lead Developer",
+                    "Lead Systems Engineer"
                 ]
             },
 
@@ -230,14 +294,40 @@ export const allProjects: ProjectGroup[] = [
 
                 // Info sections
                 productStory: [
-                
+                    {
+                        title: "The Project",
+                        description: <div>
+                            <p>NF Design Studio is a website custom build for Noelle Fontaine, in order to exhibit</p>
+                            <li>
+                                Artwork
+                            </li>
+                            <li>
+                                CAD Rendering Services
+                            </li>
+                            <li>
+                                Photography
+                            </li>
+                            <li>
+                                Interior Design
+                            </li>
+                        </div>,
+                        imageGallery: [],
+                        videoGallery: [],
+                    }
                 ],
 
-                pageDescription: <div></div>,
 
                 stack: [
-                    "React"
-                ]
+                    "React",
+                    "Javascript",
+                    "Docker"
+                ],
+
+                role: [
+                    "Sole Developer",
+                ],
+
+                externalLink: 'https://nfdesignstudio.com/',
             },
 
         ],
@@ -279,9 +369,12 @@ export const allProjects: ProjectGroup[] = [
                 
                 ],
 
-                pageDescription: <div></div>,
 
                 stack: ['Python'],
+
+                role: [
+                    "Researcher"
+                ]
 
             },
 

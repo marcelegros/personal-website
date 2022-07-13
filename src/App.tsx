@@ -9,6 +9,7 @@ import Header from './components/Header'
 import Home from './components/Pages/Home'
 import PortfolioPage from './components/Pages/PortfolioPage';
 import ProjectPage from './components/Pages/ProjectPage';
+import ResumePage from './components/Pages/Resume';
 
 function App() {
   return (
@@ -35,6 +36,10 @@ function App() {
         {/* Project Page */}
         <Route path='/project/:projectId'
           element={<ProjectPage />}
+        />
+
+        <Route path="/resume"
+          element={<ResumePage/>}
         />
 
 

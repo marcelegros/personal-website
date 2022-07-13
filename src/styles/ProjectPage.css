@@ -42,3 +42,16 @@
 .viewMore > a:hover {
     opacity: 1;
 }
+
+.productStory {
+    padding-top: 60px;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .ProjectPageBody {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+}

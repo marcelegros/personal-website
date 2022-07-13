@@ -6,6 +6,7 @@ import "../styles/Header.css"
 
 
 const links = [
+    {display: 'Resume', link: '/resume'},
     {display: 'Research', link: '/portfolio/research'},
     {display: 'Writing', link: '/portfolio/writing'},
     {display: 'Software', link: '/portfolio/software'},

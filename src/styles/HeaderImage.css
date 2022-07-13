@@ -55,6 +55,26 @@
     opacity: 0.7;
 }
 
+.headerImgTxt > a {
+    all: unset;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s ease-in-out all;
+}
+
+.headerImgTxt > a:hover {
+    opacity: 1;
+}
 
 
-  
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .headerImgTxtWrapper {
+        width: 100%
+    }
+
+
+}

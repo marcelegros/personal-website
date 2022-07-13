@@ -26,9 +26,11 @@
     display: flex;
     flex-direction: row;
 
-    padding: 60px 0px;
+    padding: 90px 0px;
 
     cursor: pointer;
+
+    /* border-bottom: 2px solid rgb(75, 75, 75); */
 
 }
 
@@ -74,9 +76,33 @@
 
 
 .productCardSpecs {
-    opacity: 0.6;
+    opacity: 1;
 
 }
+
+.productCardSpecs h3 {
+    opacity: 0.6;
+}
+
+.stackList {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.stackList > * {
+    /* flex: 1; */
+    background-color: rgb(73, 73, 73);
+    padding: 10px;
+    margin: 8px 8px;
+    border-radius: 8px;
+    color: white;
+    opacity: 0.8;
+    font-size: 15px;
+}
+
 
 @media only screen and (max-width: 800px) {
     .projectCard {
@@ -88,5 +114,11 @@
     .projectCardLeft .leadImgContainer {
         /* Flot image right! */
         order: 0 !important;
+    }
+
+    .projectCard .textContainer {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 26px;
     }
 }

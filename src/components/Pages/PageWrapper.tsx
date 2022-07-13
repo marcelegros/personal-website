@@ -10,6 +10,8 @@ export interface PageWrapperProps {
     headerDescription: string,
     headerImg: string,
     children: any,
+    externalLink?: string,
+    codeLink?: string,
 
 }
 
@@ -26,6 +28,8 @@ export default (props: PageWrapperProps) => {
                 headerTitle = {props.headerTitle}
                 headerDescription = {props.headerDescription}
                 src = {props.headerImg}
+                externalLink = {props.externalLink}
+                codeLink = {props.codeLink}
             />
 
         </div>

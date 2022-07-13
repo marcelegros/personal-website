@@ -28,6 +28,7 @@ export const PortfolioPage = () => {
                 imgPath: project.thumbnailImg,
                 link: '/project/' + project.pId,
                 stack: project?.stack,
+                role: project.role
             };
 
             return <ProjectCard 
