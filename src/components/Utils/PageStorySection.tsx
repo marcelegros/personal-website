@@ -3,6 +3,8 @@ import { ProjectStoryPhase } from '../../constants/types';
 import ItemCarousel from "./ItemCarousel";
 import '../../styles/Pages/PageStorySection.css'
 import StackAndRoles from "./StackAndRoles";
+import ReactPlayer from 'react-player';
+
 
 export interface PageStorySectionProps {
 
@@ -24,6 +26,15 @@ export const PageStorySection = (props: PageStorySectionProps) => {
             />
         </div>}
 
+        {props.story.preDescription && <>
+
+            <div className="pageStoryDescription">
+                {props.story.preDescription}
+            </div>
+
+        </>}
+        
+
         <div className="imageCarousel">
             <ItemCarousel>
                 {props.story.imageGallery.map((img, idx) => {
@@ -31,7 +42,7 @@ export const PageStorySection = (props: PageStorySectionProps) => {
                         key={idx}
                         style={{width: '100%', height: 600, overflow: 'hidden'}}
                     >
-                        <img src={img} style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
+                        <img src={img} style={{width: '100%', height: '100%', objectFit: 'contain'}}/>
 
                     </div>
                 })}
@@ -39,9 +50,34 @@ export const PageStorySection = (props: PageStorySectionProps) => {
             </ItemCarousel>
         </div>
 
-        <div className="pageStoryDescription">
-            {props.story.description}
-        </div>
+        {props.story.videoGallery.length > 0 && 
+            <ItemCarousel>
+
+                {props.story.videoGallery.map((video, idx) => {
+
+                    return <ReactPlayer 
+                        key = {idx}
+                        url = {video}
+                        controls = {true}
+                        width = {'100%'}
+                        height = {'calc(100% - 5px)'}
+                    />
+
+                })}
+                
+
+            </ItemCarousel>
+        
+        }
+        
+
+        {props.story.description && <>
+
+            <div className="pageStoryDescription">
+                {props.story.description}
+            </div>
+
+        </>}
 
         {props.story.iframeLink && <iframe 
             className="pageStoryIframe" 

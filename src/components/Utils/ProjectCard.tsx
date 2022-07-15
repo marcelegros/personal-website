@@ -16,7 +16,8 @@ export interface ProjectCard {
         text: string,
         stack: string[],
         role: string[],
-    }
+    },
+    noPage?: boolean,
 
 }
 
@@ -32,30 +33,16 @@ export default (props: ProjectCard) => {
 
     }
 
-    const getStackColor = (name: string) => {
+    const onClick = () => {
 
-        // return undefined;
+        if (props.noPage)
+            return;
 
-        if (name === "React")
-            return "rgb(90, 212, 248)"
-        if (name === "Typescript")
-            return "rgb(44, 108, 189)"
-        if (name === "Jest")
-            return "rgb(141, 59, 81)"
-        if (name === "MongoDB")
-            return "rgb(64, 147, 64)"
-        if (name === "C++")
-            return "rgb(87, 134, 190)"
-        if (name === "Docker")
-            return "rgb(36, 130, 218)"
-        if (name === "Javascript")
-            return "rgb(230, 207, 47"
-
-        return undefined;
+        navigate(props.data.link);
 
     }
 
-    return <div className={'projectCard' + (props.invertLayout ? " projectCardLeft" : "")} onClick = {() =>navigate(props.data.link)}>
+    return <div className={'projectCard' + (props.invertLayout ? " projectCardLeft" : "")} onClick = {onClick}>
 
         <div className='leadImgContainer'>
             <img
@@ -76,6 +63,7 @@ export default (props: ProjectCard) => {
             <StackAndRoles
                 stack = {props.data.stack}
                 role = {props.data.role}
+                flip = {true}
             />
            
 

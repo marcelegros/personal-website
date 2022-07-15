@@ -9,6 +9,8 @@ export interface StackAndRolesProps {
 
     stack: string[],
     role: string[],
+
+    flip?: boolean,
 }
 
 
@@ -48,6 +50,19 @@ export default (props: StackAndRolesProps) => {
 
     return <div className='productCardSpecs'>
 
+        {props.flip && props.role && props.role.length > 0 && <>
+                
+            <h3>Roles</h3>
+            <div className='stackList'>
+                {props.role.map(r => {
+                    return <div className='stackItem' style={{backgroundColor: getStackColor(r)}}>
+                        {r}
+                    </div>
+                })}
+            </div>
+
+        </>}
+
         {props.stack && props.stack.length > 0 && <>
             <h3>Stack</h3>
             <div className='stackList'>
@@ -59,7 +74,7 @@ export default (props: StackAndRolesProps) => {
             </div>
         </>}
 
-        {props.role && props.role.length > 0 && <>
+        {!props.flip && props.role && props.role.length > 0 && <>
         
             <h3>Roles</h3>
             <div className='stackList'>

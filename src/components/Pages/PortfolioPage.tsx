@@ -34,6 +34,7 @@ export const PortfolioPage = () => {
             return <ProjectCard 
                 invertLayout = {(idx % 2 === 0)}
                 data = {data}
+                noPage = {project.noPage}
             />
 
         } )}

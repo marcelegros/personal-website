@@ -52,7 +52,14 @@ export const allProjects: ProjectGroup[] = [
 
                             </p>
                         </div>,
-                        imageGallery: ['/resources/Projects/Ayisen/BannerImg.jpg','/resources/Projects/Ayisen/BannerImg.jpg','/resources/Projects/Ayisen/BannerImg.jpg'],
+                        imageGallery: [
+                            '/resources/Projects/Ayisen/FrontEnd/1.png',
+                            '/resources/Projects/Ayisen/FrontEnd/m1.jpeg',
+                            '/resources/Projects/Ayisen/FrontEnd/2.png',
+                            '/resources/Projects/Ayisen/FrontEnd/m2.jpeg',
+                            '/resources/Projects/Ayisen/FrontEnd/3.png',
+                            '/resources/Projects/Ayisen/FrontEnd/4.png',
+                        ],
                         videoGallery: [],
                         stack: ["React", "Docker"]
                     },
@@ -138,8 +145,8 @@ export const allProjects: ProjectGroup[] = [
                 externalLink: 'https://ayisen.com',
 
                 // Images
-                bannerImg: '/resources/Projects/Ayisen/BannerImg.jpg',
-                thumbnailImg: "/resources/Projects/Ayisen/Thumbnail.jpg",
+                bannerImg: '/resources/Projects/Ayisen/Brand/1.png',
+                thumbnailImg: "/resources/Projects/Ayisen/Brand/1.png",
 
                 stack: [
                     "React", 
@@ -225,14 +232,32 @@ export const allProjects: ProjectGroup[] = [
                 description: 'Observer_01 is a digital instrument, allowing musicians and producers to generate rhythms and dynamic music using the relationshipt between rotating polygons.',
                 externalLink: 'https://ayisen.com',
 
-                thumbnailImg: "/resources/Projects/Observer_01/Thumbnail.jpg",
-                bannerImg: "/resources/Projects/Observer_01/BannerImg.jpg",
+                thumbnailImg: "/resources/Projects/Observer_01/Observer1.png",
+                bannerImg: "/resources/Projects/Observer_01/Observer1.png",
 
-                pageDescription: <div>"TODO @Marcel"</div>,
+                // pageDescription: <div>"TODO @Marcel"</div>,
 
                 // Info sections
                 productStory: [
-                
+                    {
+                        title: "Rotational Music", 
+                        preDescription: <div>
+                            <p>Observer_01 is a continuous, rotational sequencer, which uses geometries and rotational speeds to create music.</p>
+                            <p>It provides a free-simulation environment, in which musians may custom tailor sounds, and positional effects to be made on the collision of any given points.</p>
+                            <p>Observer's tools allow users to
+                                <li>create, and rotate points and geometries</li>
+                                <li>load sounds onto any point</li>
+                                <li>add positionally based effects and panning to points as they playback sounds</li>
+                                <li>dynamically dictate which points should trigger other points on collision</li>
+                                <li>save and load binary presets</li>
+                                <li>turn on and off the visuals and audio associated with any given geometry</li>
+                            </p>
+                        </div>,
+                        imageGallery: [],
+                        videoGallery: [
+                            '/resources/Projects/Observer_01/Observer2.mp4'
+                        ]
+                    }
                 ],
 
                 stack: [
@@ -328,6 +353,58 @@ export const allProjects: ProjectGroup[] = [
                 ],
 
                 externalLink: 'https://nfdesignstudio.com/',
+            },
+
+            // This Website
+            {
+                // Proj Meta
+                pId: 'this_website',
+                projectName: 'This Website!',
+                projectHeadTitle: '',
+
+                noPage: true,
+
+                description: 'A portfolio website exhibiting my recent projects, which you seem to have reached the end of :)',
+
+                thumbnailImg: "/resources/Projects/PortfolioSite/1.png",
+                bannerImg: "/resources/Projects/PortfolioSite/1.png",
+
+                // Info sections
+                productStory: [
+                    {
+                        title: "Portfolio",
+                        description: <div>
+                            <p>NF Design Studio is a website custom build for Noelle Fontaine, in order to exhibit</p>
+                            <li>
+                                Artwork
+                            </li>
+                            <li>
+                                CAD Rendering Services
+                            </li>
+                            <li>
+                                Photography
+                            </li>
+                            <li>
+                                Interior Design
+                            </li>
+                        </div>,
+                        imageGallery: [],
+                        videoGallery: [],
+                    }
+                ],
+
+
+                stack: [
+                    "React",
+                    "Typescript",
+                    "Docker"
+                ],
+
+                role: [
+                    "Sole Developer",
+                ],
+
+                externalLink: 'https://marcelegros.com',
             },
 
         ],

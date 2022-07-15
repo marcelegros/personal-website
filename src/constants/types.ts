@@ -3,7 +3,8 @@
 export interface ProjectStoryPhase {
 
     title: string,
-    description: JSX.Element,
+    description?: JSX.Element,
+    preDescription?: JSX.Element,
     imageGallery: string[],
     videoGallery: string[],
     stack?: string[],
@@ -39,6 +40,8 @@ export interface Project {
     // Stack
     stack: string[],
     role: string[],
+
+    noPage?: boolean,
 
 }
 

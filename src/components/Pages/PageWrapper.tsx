@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import HeaderImage from '../HeaderImage';
+import utilities from '../../utilities';
 
 import '../../styles/PageWrapper.css';
 
@@ -16,6 +17,10 @@ export interface PageWrapperProps {
 }
 
 export default (props: PageWrapperProps) => {
+
+    utilities.hooks.useEffectOnce(() => {
+        window.scrollTo({top: 0, left: 0, behavior: 'auto'});
+    })
 
 
     return <div className='fadeQuick'>
