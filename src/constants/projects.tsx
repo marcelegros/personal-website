@@ -114,7 +114,12 @@ export const allProjects: ProjectGroup[] = [
 
                             </p>
                         </div>,
-                        imageGallery: ['/resources/Projects/Ayisen/BannerImg.jpg','/resources/Projects/Ayisen/BannerImg.jpg','/resources/Projects/Ayisen/BannerImg.jpg'],
+                        imageGallery: [
+                            '/resources/Projects/Ayisen/InternalFrontEnd/3.png',
+                            '/resources/Projects/Ayisen/InternalFrontEnd/1.png',
+                            '/resources/Projects/Ayisen/InternalFrontEnd/2.png',
+                            '/resources/Projects/Ayisen/InternalFrontEnd/4.png',
+                        ],
                         videoGallery: [],
                         stack: ["React", "Docker"],
                     },
@@ -142,7 +147,7 @@ export const allProjects: ProjectGroup[] = [
                 ],
 
 
-                externalLink: 'https://ayisen.com',
+                // externalLink: 'https://ayisen.com',
 
                 // Images
                 bannerImg: '/resources/Projects/Ayisen/Brand/1.png',
@@ -230,7 +235,7 @@ export const allProjects: ProjectGroup[] = [
                 projectHeadTitle: 'Rotation based audio sequencing engine.',
 
                 description: 'Observer_01 is a digital instrument, allowing musicians and producers to generate rhythms and dynamic music using the relationshipt between rotating polygons.',
-                externalLink: 'https://ayisen.com',
+                // externalLink: 'https://ayisen.com',
 
                 thumbnailImg: "/resources/Projects/Observer_01/Observer1.png",
                 bannerImg: "/resources/Projects/Observer_01/Observer1.png",
