@@ -57,7 +57,7 @@ export default (props: MeCardProps) => {
             </h1>
 
             <p>
-                My name is Marcel. I'm a software developer and writer based in Pittsburth, and New York. 
+                My name is Marcel. I'm a software developer and writer based in Pittsburgh, and New York. 
             </p>
 
             <p>
