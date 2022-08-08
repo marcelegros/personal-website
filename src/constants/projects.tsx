@@ -54,12 +54,13 @@ export const allProjects: ProjectGroup[] = [
                         </div>,
                         imageGallery: [
                             '/resources/Projects/Ayisen/FrontEnd/2.png',
+                            '/resources/Projects/Ayisen/FrontEnd/4.png',
+                            '/resources/Projects/Ayisen/FrontEnd/5.png',
+                            '/resources/Projects/Ayisen/FrontEnd/3.png',
                             '/resources/Projects/Ayisen/FrontEnd/1.png',
                             '/resources/Projects/Ayisen/FrontEnd/m1.jpeg',
                             '/resources/Projects/Ayisen/FrontEnd/m2.jpeg',
-                            '/resources/Projects/Ayisen/FrontEnd/3.png',
-                            '/resources/Projects/Ayisen/FrontEnd/4.png',
-                            '/resources/Projects/Ayisen/FrontEnd/5.png',
+                            
                         ],
                         videoGallery: [],
                         stack: ["React", "Docker"]
@@ -238,8 +239,8 @@ export const allProjects: ProjectGroup[] = [
                 description: 'Observer_01 is a digital instrument, allowing musicians and producers to generate rhythms and dynamic music using the relationshipt between rotating polygons.',
                 externalLink: 'https://ayisen.com/product/observer_01',
 
-                thumbnailImg: "/resources/Projects/Observer_01/FallingAround.gif",
-                bannerImg: "/resources/Projects/Observer_01/FallingAround.gif",
+                thumbnailImg: "https://ayisen-public-assets.s3.us-east-2.amazonaws.com/FallingAround.gif",
+                bannerImg: "https://ayisen-public-assets.s3.us-east-2.amazonaws.com/FallingAround.gif",
 
                 // pageDescription: <div>"TODO @Marcel"</div>,
 
